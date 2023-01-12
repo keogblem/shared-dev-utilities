@@ -15,7 +15,7 @@ return (new PhpCsFixer\Config())
                 '='  => 'align_single_space_minimal',
             ],
         ],
-        // 'blank_line_after_opening_tag' => true,
+        'blank_line_after_opening_tag' => false,
         // 'blank_line_before_statement' => true,
         'braces' => [
             'allow_single_line_closure' => true,
@@ -107,6 +107,7 @@ return (new PhpCsFixer\Config())
         'assign_null_coalescing_to_coalesce_equal' => true,
         'no_whitespace_before_comma_in_array'      => true,
         'not_operator_with_successor_space'        => true,
+        'native_function_type_declaration_casing'  => true,
     ])
     // ->setIndent("\t")
     ->setLineEnding("\n")
