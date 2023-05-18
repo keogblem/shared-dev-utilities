@@ -11,8 +11,9 @@ return (new PhpCsFixer\Config())
         'single_quote'                                => true,
         'binary_operator_spaces'                      => [
             'operators' => [
-                '=>' => 'align_single_space_minimal_by_scope',
-                '='  => 'align_single_space_minimal',
+                '=>'  => 'align_single_space_minimal_by_scope',
+                '='   => 'align_single_space_minimal',
+                '??=' => 'align_single_space_minimal',
             ],
         ],
         'blank_line_after_opening_tag'                => false,
