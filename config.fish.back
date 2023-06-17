@@ -1,0 +1,35 @@
+if status --is-login
+  set -g ANDROID_SDK_ROOT /Users/keo/Library/Android/sdk;
+  set -g ANDROID_AVD_HOME /Volumes/OMEGA/Android/avd;
+  set -x PATH $ANDROID_SDK_ROOT/platform-tools $ANDROID_SDK_ROOT/tools $PATH;
+  set -x PATH /Users/keo/.composer/vendor/bin $PATH;
+end
+
+if test -d (brew --prefix)"/share/fish/completions"
+    set -gx fish_complete_path $fish_complete_path (brew --prefix)/share/fish/completions
+end
+
+if test -d (brew --prefix)"/share/fish/vendor_completions.d"
+    set -gx fish_complete_path $fish_complete_path (brew --prefix)/share/fish/vendor_completions.d
+end
+
+alias pg='ping google.com';
+alias dns='sudo killall -HUP mDNSResponder;sudo killall mDNSResponderHelper;sudo dscacheutil -flushcache'
+alias pa='php artisan'
+alias par:l='php artisan route:list'
+alias cu='composer update'
+alias ci='composer install'
+alias c='composer'
+alias cdo='composer dump -o'
+alias art='php artisan'
+alias is='ionic serve'
+alias is='ionic serve'
+alias pest='./vendor/bin/pest'
+alias oadb='/Users/keo/Library/Android/sdk/platform-tools/adb'
+alias dsstore="find . -name '.DS_Store' -type f -delete"
+
+alias fresh='php artisan refresh-testing-db'
+
+# nvm use default
+
+test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
